@@ -14,6 +14,7 @@
                   <script>
                      $(document).ready(function() {
                        $.getJSON('data.JSON', function(data) {
+                          console.log(data); 
                          // Iterate through each item in the data array and append a row to the table
                          $.each(data.data, function(index, item) {
                            var row = '<tr>' +
