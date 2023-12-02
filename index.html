@@ -27,6 +27,7 @@
           '<td>' + item.company_name + '</td>' +
           '<td>' + item.name + '</td>' +
           '<td>' + item.contact.mobile + '</td>' +
+          '<td>' + item.contact.email + '</td>' +
           '<td>' + item.spend_amount.toFixed(2) + '</td>' +
           '</tr>';
         $(row).appendTo("#table1 tbody");
@@ -66,6 +67,7 @@
                            <th scope="col">Company</th>
                            <th scope="col">Contact</th>
                            <th scope="col">Mobile</th>
+                           <th scope="col">Email</th>
                            <th scope="col">Total Spent</th>
                         </tr>
                      </thead>
