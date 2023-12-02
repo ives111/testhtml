@@ -13,21 +13,30 @@
       <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
                   <script>
                      $(document).ready(function() {
-                       $.getJSON('data.JSON', function(data) {
-                          console.log(data); 
-                         // Iterate through each item in the data array and append a row to the table
-                         $.each(data.data, function(index, item) {
-                           var row = '<tr>' +
-                             '<td>' + item.company_name + '</td>' +
-                             '<td>' + item.name + '</td>' +
-                             '<td>' + item.contact.mobile + '</td>' +
-                             '<td>' + item.contact.email + '</td>' +
-                             '<td>' + item.spend_amount.toFixed(2) + '</td>' +
-                             '</tr>';
-                           $(row).appendTo("#table1 tbody");
-                         });
-                       });
-                     });
+  console.log("Document ready.");
+
+  $.getJSON('data.JSON')
+    .done(function(data) {
+      console.log("Data fetched successfully:", data);
+
+      // Iterate through each item in the data array and append a row to the table
+      $.each(data.data, function(index, item) {
+        console.log("Processing item:", item);
+
+        var row = '<tr>' +
+          '<td>' + item.company_name + '</td>' +
+          '<td>' + item.name + '</td>' +
+          '<td>' + item.contact.mobile + '</td>' +
+          '<td>' + item.spend_amount.toFixed(2) + '</td>' +
+          '</tr>';
+        $(row).appendTo("#table1 tbody");
+      });
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      var err = textStatus + ", " + error;
+      console.error("Data fetching failed: " + err);
+    });
+});
                   </script>
       <script>
   console.log("Test script executed.");
