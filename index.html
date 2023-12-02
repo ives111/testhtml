@@ -29,23 +29,6 @@
                   <h1 class="display-5 fw-bold">Custom jumbotron</h1>
                   <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
                   <button class="btn btn-primary btn-lg custom-btn1" type="button">Example button</button>
-                  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-                  <script>
-                     $(document).ready(function() {
-                       $.getJSON('data.json', function(data) {
-                         // Iterate through each item in the data array and append a row to the table
-                         $.each(data.data, function(index, item) {
-                           var row = '<tr>' +
-                             '<td>' + item.company_name + '</td>' +
-                             '<td>' + item.name + '</td>' +
-                             '<td>' + item.contact.mobile + '</td>' +
-                             '<td>' + item.spend_amount.toFixed(2) + '</td>' +
-                             '</tr>';
-                           $('table tbody').append(row);
-                         });
-                       });
-                     });
-                  </script>
                   <!-- Table -->
                   <table class="table mt-4">
                      <thead>
@@ -84,5 +67,22 @@
             </footer>
          </div>
       </main>
+                  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+                  <script>
+                     $(document).ready(function() {
+                       $.getJSON('data.JSON', function(data) {
+                         // Iterate through each item in the data array and append a row to the table
+                         $.each(data.data, function(index, item) {
+                           var row = '<tr>' +
+                             '<td>' + item.company_name + '</td>' +
+                             '<td>' + item.name + '</td>' +
+                             '<td>' + item.contact.mobile + '</td>' +
+                             '<td>' + item.spend_amount.toFixed(2) + '</td>' +
+                             '</tr>';
+                           $('table tbody').append(row);
+                         });
+                       });
+                     });
+                  </script>
    </body>
 </html>
