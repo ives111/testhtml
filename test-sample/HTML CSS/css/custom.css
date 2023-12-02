@@ -1,0 +1,49 @@
+ /* custom.css */
+
+/* Button 1 */
+.custom-btn1 {
+    border-radius: 0;
+    background-color: #3eafc2!important;
+    color: #FFFFFF;
+    padding: 0.375rem 2.5rem;
+}
+
+.custom-btn1:hover {
+    background-color: #079ee3;
+}
+
+/* Button 2 */
+.custom-btn2 {
+    border-radius: 0;
+    border: 1px solid #3eafc2;
+    color: #3eafc2;
+    padding: 0.375rem 2.5rem;
+}
+
+.custom-btn2:hover {
+    border-color: #079ee3;
+    color: #079ee3;
+}
+
+/* Page Text */
+@media (min-width: 768px) {
+    .custom-page-text {
+        text-align: left;
+    }
+}
+
+@media (max-width: 767px) {
+    .custom-page-text {
+        text-align: center;
+    }
+}
+
+/* Card */
+.custom-card {
+    border-radius: 0;
+}
+
+/* Dark Card */
+.custom-dark-card {
+    background-color: #00587f;
+}
